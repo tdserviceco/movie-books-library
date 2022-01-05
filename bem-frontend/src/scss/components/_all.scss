@@ -1,0 +1,64 @@
+@use "../abstracts/" as *;
+.movies,
+.books,
+.all-movies-and-books,
+.categories {
+  .movies__container__gallery__posts-content,
+  .books__container__gallery__posts-content {
+    position: relative;
+    overflow: hidden;
+  }
+  .movies__container__gallery__post-content-wrapper,
+  .books__container__gallery__post-content-wrapper {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    background: hsl(0, 100%, 99%);
+    border: hsl(34, 57%, 70%) 0.0625rem solid;
+    transition: opacity 250ms ease-in;
+    overflow-y: auto;
+    &.active {
+      opacity: 1;
+    }
+  }
+  .movies__container__gallery__post-content-category,
+  .books__container__gallery__post-content-category {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .categories,
+    h4 {
+      margin-left: 1rem;
+      & > a {
+        margin-left: 1rem;
+        padding-right: 1rem;
+        &:first-child {
+          margin-left: 0;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  .movies__container__gallery__post-content-more-information,
+  .books__container__gallery__post-content-more-information {
+    ul {
+      margin: 0;
+      padding: 1rem;
+    }
+  }
+
+  .popup {
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    border: none;
+    background: none;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,5 @@
+@mixin sizeOfIcon($width) {
+  width: $width;
+  height: 100%;
+  pointer-events: none;
+}

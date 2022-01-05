@@ -1,0 +1,30 @@
+@use "../abstracts/" as *;
+.navigation {
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  &.loaded {
+    opacity: 1;
+  }
+  form {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+header {
+  .menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      border: hsl(34, 57%, 70%) 0.0625rem solid;
+      @include sizeOfIcon(2rem);
+    }
+  }
+}

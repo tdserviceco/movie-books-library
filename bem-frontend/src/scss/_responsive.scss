@@ -1,0 +1,110 @@
+@use "./abstracts/" as *;
+
+@media (min-width: 320px) {
+  .landing__container__choices {
+    padding: 1.5rem 2rem;
+  }
+
+  .books__container-title,
+  .movies__container-title {
+    padding-left: 1rem;
+  }
+  .movies,
+  .books,
+  .all-movies-and-books,
+  .categories {
+    .books__container__gallery__posts,
+    .movies__container__gallery__posts {
+      padding: 1rem;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .landing__container__choices {
+    padding: 1.5rem 4rem;
+  }
+
+  .books__container-title,
+  .movies__container-title {
+    padding-left: 1.5rem;
+  }
+  .movies,
+  .books,
+  .all-movies-and-books,
+  .categories {
+    .books__container__gallery__posts,
+    .movies__container__gallery__posts {
+      padding: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      .feature {
+        grid-row: span 2;
+      }
+    }
+  }
+}
+
+@media (min-width: 920px) {
+  .books__container-title,
+  .movies__container-title {
+    padding-left: 2rem;
+  }
+  .navigation {
+    padding: 0.5rem 2rem;
+  }
+  .movies,
+  .books,
+  .all-movies-and-books,
+  .categories {
+    .books__container__gallery__posts,
+    .movies__container__gallery__posts {
+      padding: 2rem;
+      grid-template-columns: repeat(3, 1fr);
+      .feature {
+        grid-row: 1;
+        grid-column: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .books__container-title,
+  .movies__container-title {
+    padding-left: 4rem;
+  }
+  .navigation {
+    padding: 0.5rem 4rem;
+  }
+  .movies,
+  .books,
+  .all-movies-and-books,
+  .categories {
+    .books__container__gallery__posts,
+    .movies__container__gallery__posts {
+      padding: 4rem;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .popup:hover {
+    animation: bounce2 2s ease infinite;
+  }
+}
+
+@keyframes bounce2 {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  40% {
+    transform: translate(-50%, -30px);
+  }
+  60% {
+    transform: translate(-50%, -15px);
+  }
+}

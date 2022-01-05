@@ -1,0 +1,57 @@
+@use "../abstracts/" as *;
+
+.landing {
+  h1 {
+    background-color: white;
+    text-align: center;
+    border-bottom: 0.0625rem hsl(0, 0%, 0%) solid;
+    font-size: 2rem;
+  }
+
+  .choice {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: calc(100vh - 1.5rem);
+    > :first-child {
+      border-right: 0.0625rem solid black;
+    }
+    > :last-child {
+      border-left: 0.0625rem solid black;
+    }
+    .choice-books,
+    .choice-movies,
+    .choice-library {
+      position: relative;
+    }
+  }
+
+  .link-movies,
+  .link-books,
+  .link-library {
+    &:hover {
+      span {
+        text-shadow: 1px 1px 1px #000;
+      }
+    }
+    span {
+      transition: text-shadow;
+      text-shadow: 1px 3px 0px #000;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      color: hsl(0, 0%, 100%);
+      font-size: 1rem;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .link-library {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    height: 100%;
+  }
+}
