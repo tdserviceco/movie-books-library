@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { paginationNumberMovies, paginationNumberBooks } from '../../actions';
 const DisplayPagination = ({ type, postPerPage, totalPosts }) => {
   const pageNumbers = [];
@@ -22,8 +23,8 @@ const DisplayPagination = ({ type, postPerPage, totalPosts }) => {
           <li key={number} className={`page-item ${number === page ? 'active' : ''}`}>
             {
               type === 'movies' ?
-                <button type="button" className='movies__pagination__btn' onClick={() => dispatch(paginationNumberMovies(number))}>{number}</button> :
-                <button type="button" className='books__pagination__btn' onClick={() => dispatch(paginationNumberBooks(number))}>{number}</button>
+                <Link type="button" to="#" className='movies__pagination__btn' onClick={() => dispatch(paginationNumberMovies(number))}>{number}</Link> :
+                <Link type="button" to="#" className='books__pagination__btn' onClick={() => dispatch(paginationNumberBooks(number))}>{number}</Link>
             }
 
           </li>

@@ -57,7 +57,19 @@ svg {
   li {
     .books__pagination__btn,
     .movies__pagination__btn {
-      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+      padding: 0.5rem;
+      border: 0.0625rem solid hsl(0, 0%, 0%);
+      border-radius: 50%;
+      transition: background-color 250ms ease-in;
+      &:hover {
+        background-color: hsla(0, 0%, 50%, 0.527);
+      }
+      text-decoration: none;
     }
     margin: 1rem 0.5rem;
   }

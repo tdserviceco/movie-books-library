@@ -3,7 +3,7 @@ import { PostContent } from '.';
 import { useSelector } from 'react-redux';
 
 const DisplayPosts = ({ posts, type }) => {
-  let pageNumber;
+  let pageNumber
   if (type === 'books') {
     pageNumber = useSelector(state => state.paginationNumberBooks)
   }
@@ -11,7 +11,6 @@ const DisplayPosts = ({ posts, type }) => {
     pageNumber = useSelector(state => state.paginationNumberMovies)
   }
 
-  console.log(type, pageNumber)
   return posts.map((post, key) => (
 
     <div className={`${type}__container__gallery__posts-content ${key === 0 && posts.length > 1 && pageNumber === 1 ? 'feature' : ''}`} key={key}>

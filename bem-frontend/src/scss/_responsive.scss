@@ -43,6 +43,10 @@
         grid-row: span 2;
       }
     }
+    .movies__container__gallery__posts-content,
+    .books__container__gallery__posts-content {
+      margin-bottom: 0;
+    }
   }
 }
 
