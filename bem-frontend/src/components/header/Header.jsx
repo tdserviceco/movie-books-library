@@ -8,7 +8,6 @@ const Header = ({ toggle }) => {
   }
   return (
     <header>
-      {console.log()}
       <button className={`menu-button ${toggleClick ? 'active' : ''}`} type="button" onClick={toggleFunction}>
         {toggleClick &&
           <Icon icon="fe:app-menu" color="rgba(0, 0, 0, 0.5019607843137255)" />

@@ -6,8 +6,8 @@ const DisplayPagination = ({ type, postPerPage, totalPosts }) => {
   const pageNumbers = [];
   let page;
   {
-    type === 'movies' ?
-      page = useSelector(state => state.paginationNumberMovies) :
+    type === 'movies' ? page = useSelector(state => state.paginationNumberMovies)
+      :
       page = useSelector(state => state.paginationNumberBooks)
   }
   console.log(page)
@@ -26,7 +26,6 @@ const DisplayPagination = ({ type, postPerPage, totalPosts }) => {
                 <Link type="button" to="#" className='movies__pagination__btn' onClick={() => dispatch(paginationNumberMovies(number))}>{number}</Link> :
                 <Link type="button" to="#" className='books__pagination__btn' onClick={() => dispatch(paginationNumberBooks(number))}>{number}</Link>
             }
-
           </li>
         ))}
       </ul>
