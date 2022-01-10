@@ -10,7 +10,6 @@ const DisplayPagination = ({ type, postPerPage, totalPosts }) => {
       :
       page = useSelector(state => state.paginationNumberBooks)
   }
-  console.log(page)
   const dispatch = useDispatch()
   for (let i = 1; i <= Math.ceil(totalPosts / postPerPage); i++) {
     pageNumbers.push(i);
